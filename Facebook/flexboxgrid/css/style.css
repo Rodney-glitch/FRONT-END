@@ -17,42 +17,35 @@ a:hover{
     text-decoration: underline;
 }
 
-.container-1{
-    box-sizing: border-box;
-    display: flex;
-    max-width: 90%;
-    justify-content: space-between;
+.container{
     margin: auto;
-    padding-top: 10em;
 }
 
-.mc-1{
-    margin: 4em 0;
-    padding-right: 5em;
+#main{
+    margin-top: 10em;
 }
 
-.mc-1 h2{
-    font-size: 3.7em;
+#main-left h1{
+    font-size: 4em;
     color: rgb(53, 90, 201);
 }
 
-.mc-1 p{
-    font-size: 1.3em;
+#main-left p{
+    font-size: 1.2em;
 }
 
-.mc-2 form{
-    width: 400px;
+#main-right form{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 400px;
     margin-bottom: 1em;
     border-radius: 12px;
     box-shadow: 0.5px 0.5px #888888;
     padding: 1em;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
 }
 
-.mc-2 input{
+#main-right input{
     padding: 1em;
     border-radius: 5px;
     border-width: 0.5px;
@@ -73,6 +66,7 @@ a:hover{
 #forget-p{
     padding: 0.5em 0 1em 0;
     border-bottom: solid 0.5px gray;
+    text-align: center;
 }
 
 #forget-a{
@@ -81,7 +75,7 @@ a:hover{
 }
 
 #create{
-    max-width: 70%;
+    width: 60%;
     align-self: center;
     margin-top: 2em;
     background-color: rgb(70, 179, 94);
@@ -93,69 +87,72 @@ a:hover{
 #celeb-a{
     color: black;
     font-weight: bold;
-    font-size: 1em;
-}
-
-#celeb-p{
-    color: black;
-    font-size: 1em;
-}
-
-.container-2{
-    position: absolute;
-    bottom: 0;
-    background-color: #fff;
-    min-width: 100%;
-}
-
-.container-2 ul{
-    list-style: none;
-}
-
-.container-2 ul li{
-    padding: 0.7em;
-}
-
-.container-2 ul li a{
     font-size: small;
+}
+
+#celeb-a:hover{
     color: steelblue;
 }
 
-.mc-3:first-child{
-    color: #888;
+
+#celeb-p{
+    color: black;
     font-size: small;
+    text-align: center;
 }
 
-.mc-3{
+footer{
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    font-size: small;
+    min-width: 100%;
+    margin: 0;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer ul li{
+    padding: 0.7em;
+}
+
+footer ul li a{
+    color: steelblue;
+}
+
+#foot-top ul{
     display: flex;
     border-bottom: solid #888 0.5px;
 }
 
-.mc-4{
+#foot-bottom ul{
     display: flex;
+    flex-wrap: wrap;
 }
 
-@media(max-width:800px){
-    .container-1{
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        text-align: center;
-        align-content: center;
-        min-width: 100%;
-    }
-    .mc-1 {
-        padding: 0;
-        min-width: 100%;
-    }
+#foot-top ul:first-child{
+    color: #888;
+}
 
-    .mc-2{
+@media only screen and (orientation: portrait){
+    body{
+        overflow-x: hidden;
+    }
+    #main-left{
+        align-items: center;
+        text-align: center;
+        margin: 0 0 1em 0;
+        padding: 0;
+    }
+    #main-right{
+        padding: 0;
+    }
+    #main-right form{
         margin: auto;
     }
-
-    .mc-4{
-        display: flex;
-        flex-wrap: wrap;
+    #celeb-p{
+        margin-top: 1em;
     }
-   
 }
